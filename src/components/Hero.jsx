@@ -4,7 +4,7 @@ export default function Hero({ movie }) {
   if (!movie) return null
 
   return (
-    <section className="featured-hero" aria-labelledby="featured-title">
+    <section className="featured-hero" id="cartelera" aria-labelledby="featured-title">
       <img className="featured-hero__image" src={movie.image} alt={`Escena destacada de ${movie.title}`} />
       <div className="featured-hero__shade" />
       <div className="featured-hero__content">

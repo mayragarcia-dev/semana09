@@ -8,7 +8,7 @@ export default function Header() {
         <span className="brand-name">CINE <strong>AURORA</strong></span>
       </a>
       <nav className="main-nav" aria-label="Navegación principal">
-        <a className="nav-link is-active" href="#cartelera">Cartelera</a>
+        <a className="nav-link is-active" href="#peliculas">Cartelera</a>
         <a className="nav-link" href="#proximamente">Próximamente</a>
         <a className="nav-link" href="#experiencia">La experiencia</a>
       </nav>
