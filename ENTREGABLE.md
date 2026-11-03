@@ -153,7 +153,7 @@ export const movies = [
     duration: '3h 00m',
     schedules: ['14:00', '18:00', '21:15'],
   },
-  // … seis películas más
+  // ... six more movies
 ]
 ```
 

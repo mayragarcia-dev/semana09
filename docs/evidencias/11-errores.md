@@ -9,7 +9,7 @@ Los tres errores se provocaron en un **worktree aislado** (`lab09-errores`) para
 **Cambio realizado:**
 
 ```jsx
-// Incorrecto
+// Incorrect
 <header class="site-header">
 ```
 
@@ -24,7 +24,7 @@ Invalid DOM property `class`. Did you mean `className`?
 **Corrección:**
 
 ```jsx
-// Correcto
+// Correct
 <header className="site-header">
 ```
 
@@ -39,7 +39,7 @@ Invalid DOM property `class`. Did you mean `className`?
 **Cambio realizado:**
 
 ```jsx
-// Incorrecto: dos elementos hermanos sin contenedor
+// Incorrect: two sibling elements without a wrapper
 return (
   <header className="site-header">...</header>
   <div className="header-extra">Extra</div>
@@ -72,7 +72,7 @@ Failed to load resource: the server responded with a status of 500 (Internal Ser
 **Corrección:**
 
 ```jsx
-// Correcto: un solo nodo raíz
+// Correct: a single root node
 return (
   <>
     <header className="site-header">...</header>
@@ -92,7 +92,7 @@ return (
 **Cambio realizado:**
 
 ```jsx
-// Incorrecto: falta key
+// Incorrect: missing key
 {movies.map((movie) => <MovieCard movie={movie} />)}
 ```
 
@@ -109,7 +109,7 @@ Check the render method of `MovieList`. See https://react.dev/link/warning-keys 
 **Corrección:**
 
 ```jsx
-// Correcto: clave estable por película
+// Correct: stable key per movie
 {movies.map((movie) => <MovieCard movie={movie} key={movie.id} />)}
 ```
 
