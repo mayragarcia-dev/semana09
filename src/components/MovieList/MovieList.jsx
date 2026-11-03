@@ -1,5 +1,5 @@
-import MovieCard from './MovieCard.jsx'
-import '../styles/movie-list.css'
+import MovieCard from '../MovieCard/MovieCard.jsx'
+import '../../styles/movie-list.css'
 
 export default function MovieList({ movies }) {
   return (

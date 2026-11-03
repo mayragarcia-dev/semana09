@@ -1,4 +1,4 @@
-import '../styles/hero-banner.css'
+import '../../styles/hero-banner.css'
 
 export default function Hero({ movie }) {
   if (!movie) return null
