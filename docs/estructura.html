@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Estructura del proyecto — semana09</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #1e1e1e;
+      color: #cccccc;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      font-size: 14px;
+    }
+    .window {
+      width: 980px;
+      margin: 0 auto;
+      background: #1e1e1e;
+      border: 1px solid #3c3c3c;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, .45);
+    }
+    .titlebar {
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 12px;
+      background: #323233;
+      border-bottom: 1px solid #252526;
+      color: #cccccc;
+      font-size: 12px;
+    }
+    .titlebar .dots { display: flex; gap: 7px; }
+    .dot { width: 11px; height: 11px; border-radius: 50%; }
+    .dot.red { background: #ff5f56; }
+    .dot.yellow { background: #ffbd2e; }
+    .dot.green { background: #27c93f; }
+    .titlebar .title { opacity: .9; }
+    .body { display: flex; min-height: 760px; }
+    .activity {
+      width: 48px;
+      background: #333333;
+      border-right: 1px solid #252526;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 12px;
+      gap: 18px;
+      color: #858585;
+      font-size: 18px;
+    }
+    .activity .active { color: #ffffff; border-left: 2px solid #007acc; padding-left: 6px; }
+    .sidebar {
+      width: 430px;
+      background: #252526;
+      border-right: 1px solid #1e1e1e;
+      padding: 10px 0 24px;
+    }
+    .sidebar-title {
+      padding: 0 16px 10px;
+      color: #bbbbbb;
+      font-size: 11px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .folder {
+      padding: 4px 16px;
+      color: #cccccc;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: .02em;
+    }
+    .folder::before { content: "▾ "; color: #cccccc; }
+    pre.tree {
+      margin: 6px 0 0;
+      padding: 0 18px 0 30px;
+      color: #d4d4d4;
+      font-family: Consolas, "Cascadia Code", monospace;
+      font-size: 12.5px;
+      line-height: 1.65;
+      white-space: pre;
+    }
+    .tree .dir { color: #dcb67a; font-weight: 600; }
+    .tree .file { color: #9cdcfe; }
+    .tree .md { color: #ce9178; }
+    .tree .css { color: #d7ba7d; }
+    .tree .json { color: #b5cea8; }
+    .tree .muted { color: #6a9955; }
+    .editor {
+      flex: 1;
+      background: #1e1e1e;
+      padding: 28px 34px;
+    }
+    .editor h1 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      font-weight: 500;
+      color: #e8e8e8;
+    }
+    .editor p { margin: 0 0 18px; color: #a9a9a9; line-height: 1.5; }
+    .editor .badge {
+      display: inline-block;
+      padding: 4px 9px;
+      border-radius: 4px;
+      background: #0e639c;
+      color: #ffffff;
+      font-size: 11px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .editor .note {
+      margin-top: 24px;
+      padding: 14px 16px;
+      border-left: 3px solid #dcb67a;
+      background: #2a2a2a;
+      color: #cfcfcf;
+      font-size: 12.5px;
+      line-height: 1.6;
+    }
+    .editor code {
+      font-family: Consolas, "Cascadia Code", monospace;
+      color: #ce9178;
+    }
+    .statusbar {
+      height: 24px;
+      background: #007acc;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 12px;
+      font-size: 11px;
+    }
+  </style>
+</head>
+<body>
+  <div class="window">
+    <div class="titlebar">
+      <div class="dots">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
+      <div class="title">semana09 — Visual Studio Code</div>
+      <div></div>
+    </div>
+    <div class="body">
+      <div class="activity">
+        <div class="active">▤</div>
+        <div>⌕</div>
+        <div>⑂</div>
+        <div>▷</div>
+        <div>⚙</div>
+      </div>
+      <div class="sidebar">
+        <div class="sidebar-title">Explorer</div>
+        <div class="folder">SEMANA09</div>
+        <pre class="tree"><span class="dir">├── docs/</span>
+<span class="dir">│   ├── evidencias/</span>
+<span class="md">│   │   ├── 10-casos-prueba.md</span>
+<span class="md">│   │   ├── 10-hero-desktop.png</span>
+<span class="md">│   │   ├── 10-resultado-desktop.png</span>
+<span class="md">│   │   ├── 10-verificacion.md</span>
+<span class="md">│   │   ├── 11-errores.md</span>
+<span class="md">│   │   ├── 12-estructura-proyecto.png</span>
+<span class="dir">│   │   └── errores/</span>
+<span class="md">│   │       └── 11-error-dos-nodos-raiz.png</span>
+<span class="file">│   └── estructura.html</span>
+<span class="dir">├── src/</span>
+<span class="dir">│   ├── components/</span>
+<span class="dir">│   │   ├── Footer/</span>
+<span class="file">│   │   │   └── Footer.jsx</span>
+<span class="dir">│   │   ├── Header/</span>
+<span class="file">│   │   │   └── Header.jsx</span>
+<span class="dir">│   │   ├── Hero/</span>
+<span class="file">│   │   │   └── Hero.jsx</span>
+<span class="dir">│   │   ├── MovieCard/</span>
+<span class="file">│   │   │   └── MovieCard.jsx</span>
+<span class="dir">│   │   └── MovieList/</span>
+<span class="file">│   │       └── MovieList.jsx</span>
+<span class="dir">│   ├── data/</span>
+<span class="file">│   │   └── movies.js</span>
+<span class="dir">│   ├── styles/</span>
+<span class="css">│   │   ├── base.css</span>
+<span class="css">│   │   ├── footer.css</span>
+<span class="css">│   │   ├── header.css</span>
+<span class="css">│   │   ├── hero-banner.css</span>
+<span class="css">│   │   ├── main.css</span>
+<span class="css">│   │   ├── movie-card.css</span>
+<span class="css">│   │   ├── movie-list.css</span>
+<span class="css">│   │   └── tokens.css</span>
+<span class="file">│   ├── App.jsx</span>
+<span class="file">│   └── main.jsx</span>
+<span class="json">├── .gitignore</span>
+<span class="json">├── .oxlintrc.json</span>
+<span class="md">├── ENTREGABLE.md</span>
+<span class="file">├── index.html</span>
+<span class="json">├── package-lock.json</span>
+<span class="json">├── package.json</span>
+<span class="md">├── README.md</span>
+<span class="file">└── vite.config.js</span></pre>
+      </div>
+      <div class="editor">
+        <span class="badge">Laboratorio 09</span>
+        <h1>Estructura del proyecto</h1>
+        <p>
+          Organización por responsabilidad: <code>components/</code> con una carpeta por
+          componente, <code>data/</code> para la cartelera y <code>styles/</code> para la
+          arquitectura CSS.
+        </p>
+        <div class="note">
+          <strong>Componentes:</strong> Header, Footer, Hero, MovieCard y MovieList.<br />
+          <strong>Datos:</strong> ocho películas en <code>src/data/movies.js</code>.<br />
+          <strong>Evidencias:</strong> capturas, casos de prueba y registro de errores en
+          <code>docs/evidencias/</code>.
+        </div>
+      </div>
+    </div>
+    <div class="statusbar">
+      <span>main*</span>
+      <span>UTF-8 · JavaScript React · LF</span>
+    </div>
+  </div>
+</body>
+</html>
