@@ -1,25 +1,23 @@
 # Cine Aurora — Cartelera con React + Vite
 
-Aplicación de una sola página que muestra la cartelera de un cine. El proyecto fue desarrollado para el **Laboratorio 09 — ReactJS** del curso **Desarrollo de Aplicaciones Empresariales** (sección 4-C24-A).
+Aplicación de una sola página que muestra la cartelera de un cine. El proyecto es acumulativo: parte del **Laboratorio 09** y añade los conceptos del **Laboratorio 10 — Componentes y eventos** del curso **Desarrollo de Aplicaciones Empresariales** (sección 4-C24-A).
 
-## Descripción
+## Funciones del Laboratorio 10
 
-La interfaz se compone de:
-
-- **Header:** nombre del cine y navegación principal.
-- **Hero:** banner de la película destacada de la semana.
-- **MovieList:** grilla con las ocho películas en cartelera.
-- **MovieCard:** tarjeta con imagen, título, clasificación, valoración y horarios.
-- **Footer:** dirección, teléfono, correo y horarios de atención.
-
-Los datos de las películas viven en `src/data/movies.js` y se distribuyen a los componentes mediante props.
+- **`Button` reutilizable** con contenido por `children` y variantes por `variant`.
+- **Favoritas con `useState`** en `App`; la tarjeta avisa al padre mediante una función.
+- **`MovieSearch` controlado** con `value` y `onChange`.
+- **Búsqueda con retardo de 300 ms** para no filtrar en cada pulsación.
+- **Filtrado por título o sinopsis**, sin distinguir mayúsculas ni tildes.
+- **Estado vacío** cuando ninguna película coincide.
+- **Persistencia de favoritas** en `localStorage` con la clave `cine-aurora:favorites`.
 
 ## Tecnologías
 
 - React 19
 - Vite 8
 - JavaScript (JSX)
-- CSS modular por responsabilidad
+- CSS por responsabilidad
 - Oxlint
 
 ## Requisitos
@@ -42,31 +40,54 @@ npm run lint      # ejecuta Oxlint
 ```text
 semana09/
 ├── docs/
-│   └── evidencias/          # capturas, casos de prueba y registro de errores
+│   └── evidencias/
+│       └── lab10/               # capturas y verificaciones del Laboratorio 10
+├── public/
+│   └── favicon.svg
 ├── src/
-│   ├── components/          # una carpeta por componente
+│   ├── components/
+│   │   ├── Button/
+│   │   ├── EmptyState/
 │   │   ├── Footer/
 │   │   ├── Header/
 │   │   ├── Hero/
 │   │   ├── MovieCard/
-│   │   └── MovieList/
+│   │   ├── MovieList/
+│   │   └── MovieSearch/
 │   ├── data/
-│   │   └── movies.js        # cartelera de ocho películas
-│   ├── styles/              # tokens, base y estilos por componente
-│   ├── App.jsx              # composición principal
-│   └── main.jsx             # punto de entrada
-├── ENTREGABLE.md            # documento de entrega del laboratorio
+│   │   └── movies.js
+│   ├── hooks/
+│   │   └── useDebouncedValue.js
+│   ├── styles/
+│   ├── utils/
+│   │   └── favoritesStorage.js
+│   ├── App.jsx
+│   └── main.jsx
+├── ENTREGABLE.md
+├── README.md
 ├── index.html
 ├── package.json
 └── vite.config.js
 ```
 
+## Dónde vive el estado
+
+| Dato | Componente | Persistencia |
+|---|---|---|
+| `favorites` | `App` | `localStorage` |
+| `searchTerm` | `App` | No |
+| `debouncedSearchTerm` | `App`, con `useDebouncedValue` | No |
+| `filteredMovies` | `MovieList`, derivado con `useMemo` | No |
+| `isFavorite` | `MovieCard`, derivado de `favorites` | No |
+
+La explicación completa está en [`ENTREGABLE.md`](ENTREGABLE.md#73-dónde-vive-cada-dato-y-por-qué--punto-11).
+
 ## Documentación de la entrega
 
 - [`ENTREGABLE.md`](ENTREGABLE.md): explicación, código, capturas, casos de prueba y autoevaluación.
-- [`docs/evidencias/10-verificacion.md`](docs/evidencias/10-verificacion.md): verificación del entorno y del render.
-- [`docs/evidencias/10-casos-prueba.md`](docs/evidencias/10-casos-prueba.md): casos de prueba ejecutados.
-- [`docs/evidencias/11-errores.md`](docs/evidencias/11-errores.md): los tres errores típicos de JSX/React.
+- [`docs/evidencias/lab10/07-debounce-consola.md`](docs/evidencias/lab10/07-debounce-consola.md): registro real del retardo del buscador.
+- [`docs/evidencias/lab10/verificacion-playwright.json`](docs/evidencias/lab10/verificacion-playwright.json): verificación de búsqueda, estado vacío y persistencia.
+- [`docs/evidencias/lab10/verificacion-extra.json`](docs/evidencias/lab10/verificacion-extra.json): búsqueda por sinopsis, tildes, limpieza y almacenamiento inválido.
 
 ## Autor
 

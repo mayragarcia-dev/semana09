@@ -1,0 +1,32 @@
+{
+  "synopsisSearch": {
+    "cards": 1,
+    "titles": [
+      "Duna: Parte Dos"
+    ]
+  },
+  "accentSearch": {
+    "cards": 1,
+    "titles": [
+      "Anatomía de una caída"
+    ]
+  },
+  "clearSearch": {
+    "cards": 8,
+    "value": "",
+    "empty": false
+  },
+  "invalidStorage": {
+    "cards": 8,
+    "active": 0,
+    "stored": "[]",
+    "bodyHasContent": true
+  },
+  "consoleErrors": [],
+  "final": {
+    "cards": 8,
+    "search": true,
+    "favorites": 8,
+    "active": 0
+  }
+}

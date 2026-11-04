@@ -158,17 +158,27 @@
         <div class="folder">SEMANA09</div>
         <pre class="tree"><span class="dir">├── docs/</span>
 <span class="dir">│   ├── evidencias/</span>
-<span class="md">│   │   ├── 10-casos-prueba.md</span>
-<span class="md">│   │   ├── 10-hero-desktop.png</span>
-<span class="md">│   │   ├── 10-resultado-desktop.png</span>
-<span class="md">│   │   ├── 10-verificacion.md</span>
-<span class="md">│   │   ├── 11-errores.md</span>
-<span class="md">│   │   ├── 12-estructura-proyecto.png</span>
-<span class="dir">│   │   └── errores/</span>
-<span class="md">│   │       └── 11-error-dos-nodos-raiz.png</span>
+<span class="dir">│   │   └── lab10/</span>
+<span class="md">│   │       ├── 01-home-desktop.png</span>
+<span class="md">│   │       ├── 02-busqueda-duna.png</span>
+<span class="md">│   │       ├── 03-estado-vacio.png</span>
+<span class="md">│   │       ├── 04-favoritos-antes-recarga.png</span>
+<span class="md">│   │       ├── 05-favoritos-despues-recarga.png</span>
+<span class="md">│   │       ├── 06-home-mobile.png</span>
+<span class="md">│   │       ├── 07-busqueda-duna-tecleo.png</span>
+<span class="md">│   │       ├── 07-debounce-consola.md</span>
+<span class="md">│   │       ├── 08-estructura-lab10.png</span>
+<span class="md">│   │       ├── verificacion-playwright.json</span>
+<span class="md">│   │       └── verificacion-extra.json</span>
 <span class="file">│   └── estructura.html</span>
+<span class="dir">├── public/</span>
+<span class="file">│   └── favicon.svg</span>
 <span class="dir">├── src/</span>
 <span class="dir">│   ├── components/</span>
+<span class="dir">│   │   ├── Button/</span>
+<span class="file">│   │   │   └── Button.jsx</span>
+<span class="dir">│   │   ├── EmptyState/</span>
+<span class="file">│   │   │   └── EmptyState.jsx</span>
 <span class="dir">│   │   ├── Footer/</span>
 <span class="file">│   │   │   └── Footer.jsx</span>
 <span class="dir">│   │   ├── Header/</span>
@@ -177,19 +187,28 @@
 <span class="file">│   │   │   └── Hero.jsx</span>
 <span class="dir">│   │   ├── MovieCard/</span>
 <span class="file">│   │   │   └── MovieCard.jsx</span>
-<span class="dir">│   │   └── MovieList/</span>
-<span class="file">│   │       └── MovieList.jsx</span>
+<span class="dir">│   │   ├── MovieList/</span>
+<span class="file">│   │   │   └── MovieList.jsx</span>
+<span class="dir">│   │   └── MovieSearch/</span>
+<span class="file">│   │       └── MovieSearch.jsx</span>
 <span class="dir">│   ├── data/</span>
 <span class="file">│   │   └── movies.js</span>
+<span class="dir">│   ├── hooks/</span>
+<span class="file">│   │   └── useDebouncedValue.js</span>
 <span class="dir">│   ├── styles/</span>
 <span class="css">│   │   ├── base.css</span>
+<span class="css">│   │   ├── button.css</span>
+<span class="css">│   │   ├── empty-state.css</span>
 <span class="css">│   │   ├── footer.css</span>
 <span class="css">│   │   ├── header.css</span>
 <span class="css">│   │   ├── hero-banner.css</span>
 <span class="css">│   │   ├── main.css</span>
 <span class="css">│   │   ├── movie-card.css</span>
 <span class="css">│   │   ├── movie-list.css</span>
+<span class="css">│   │   ├── movie-search.css</span>
 <span class="css">│   │   └── tokens.css</span>
+<span class="dir">│   ├── utils/</span>
+<span class="file">│   │   └── favoritesStorage.js</span>
 <span class="file">│   ├── App.jsx</span>
 <span class="file">│   └── main.jsx</span>
 <span class="json">├── .gitignore</span>
@@ -202,23 +221,26 @@
 <span class="file">└── vite.config.js</span></pre>
       </div>
       <div class="editor">
-        <span class="badge">Laboratorio 09</span>
+        <span class="badge">Laboratorio 10</span>
         <h1>Estructura del proyecto</h1>
         <p>
           Organización por responsabilidad: <code>components/</code> con una carpeta por
-          componente, <code>data/</code> para la cartelera y <code>styles/</code> para la
+          componente, <code>hooks/</code> para el retardo, <code>utils/</code> para la
+          persistencia, <code>data/</code> para la cartelera y <code>styles/</code> para la
           arquitectura CSS.
         </p>
         <div class="note">
-          <strong>Componentes:</strong> Header, Footer, Hero, MovieCard y MovieList.<br />
-          <strong>Datos:</strong> ocho películas en <code>src/data/movies.js</code>.<br />
-          <strong>Evidencias:</strong> capturas, casos de prueba y registro de errores en
-          <code>docs/evidencias/</code>.
+          <strong>Componentes:</strong> Button, MovieSearch, EmptyState, Header, Footer, Hero,
+          MovieCard y MovieList.<br />
+          <strong>Estado:</strong> favoritas y búsqueda en <code>App</code>; filtro derivado en
+          <code>MovieList</code>.<br />
+          <strong>Evidencias:</strong> capturas, casos de prueba y registro de consola en
+          <code>docs/evidencias/lab10/</code>.
         </div>
       </div>
     </div>
     <div class="statusbar">
-      <span>main</span>
+      <span>lab10-componentes-eventos</span>
       <span>UTF-8 · JavaScript React · LF</span>
     </div>
   </div>

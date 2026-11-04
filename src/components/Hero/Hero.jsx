@@ -1,6 +1,8 @@
+import Button from '../Button/Button.jsx'
+import MovieSearch from '../MovieSearch/MovieSearch.jsx'
 import '../../styles/hero-banner.css'
 
-export default function Hero({ movie }) {
+export default function Hero({ movie, searchTerm, onSearchChange, onSearchSubmit }) {
   if (!movie) return null
 
   return (
@@ -12,7 +14,16 @@ export default function Hero({ movie }) {
         <h1 id="featured-title">{movie.title}</h1>
         <p className="featured-hero__meta">{movie.rating} ★ <span>·</span> {movie.classification} <span>·</span> {movie.duration}</p>
         <p className="featured-hero__synopsis">{movie.synopsis}</p>
-        <a className="featured-hero__button" href="#peliculas">Ver horarios <span aria-hidden="true">↗</span></a>
+        <MovieSearch
+          value={searchTerm}
+          onChange={onSearchChange}
+          onSubmit={onSearchSubmit}
+        />
+        <div className="featured-hero__actions">
+          <Button className="featured-hero__button" href="#peliculas" variant="ghost">
+            Ver horarios <span aria-hidden="true">↗</span>
+          </Button>
+        </div>
       </div>
       <span className="featured-hero__index">CINE AURORA <b>—</b> 01 / 08</span>
     </section>

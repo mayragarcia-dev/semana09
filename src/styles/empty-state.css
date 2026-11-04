@@ -1,0 +1,26 @@
+.empty-state {
+  padding: 54px 24px;
+  border: 1px dashed var(--color-line);
+  border-radius: var(--radius-md);
+  background: rgba(26, 25, 22, .6);
+  text-align: center;
+}
+
+.empty-state__eyebrow {
+  margin: 0 0 12px;
+  color: var(--color-accent);
+  font-size: 9px;
+  letter-spacing: .22em;
+}
+
+.empty-state h3 {
+  margin: 0 0 10px;
+  color: var(--color-text);
+  font: 400 clamp(24px, 3vw, 32px)/1.2 var(--font-display);
+}
+
+.empty-state__text {
+  margin: 0 0 20px;
+  color: var(--color-muted);
+  font-size: 12px;
+}

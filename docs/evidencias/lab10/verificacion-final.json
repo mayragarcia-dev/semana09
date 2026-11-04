@@ -1,0 +1,70 @@
+{
+  "initial": {
+    "cards": 8,
+    "searchInputs": 1,
+    "favoriteButtons": 8,
+    "hero": "Duna: Parte Dos",
+    "headerCtaTag": "A",
+    "favoriteTag": "BUTTON",
+    "variants": {
+      "primary": 1,
+      "ghost": 2,
+      "favorite": 8,
+      "favoriteActive": 0
+    }
+  },
+  "search": {
+    "cards": 1,
+    "titles": [
+      "Duna: Parte Dos"
+    ],
+    "note": "1 de 8 películas"
+  },
+  "submit": {
+    "scrollY": 742,
+    "url": "http://127.0.0.1:5174/",
+    "searchValue": "duna",
+    "urlUnchanged": true
+  },
+  "empty": {
+    "cards": 0,
+    "empty": true,
+    "text": "SIN RESULTADOS\n\nNo encontramos “zzz”\n\nPrueba con otro título o revisa la ortografía.\n\nLimpiar búsqueda"
+  },
+  "clear": {
+    "cards": 8,
+    "value": "",
+    "empty": false
+  },
+  "favoriteOn": {
+    "pressed": "true",
+    "label": "★En favoritas",
+    "stored": "[\"duna-parte-dos\"]"
+  },
+  "favoriteAfterReload": {
+    "pressed": "true",
+    "label": "★En favoritas",
+    "stored": "[\"duna-parte-dos\"]"
+  },
+  "favoriteOff": {
+    "pressed": "false",
+    "label": "☆Favorita",
+    "stored": "[]"
+  },
+  "invalidStorage": {
+    "cards": 8,
+    "active": 0,
+    "stored": "[]",
+    "hasContent": true
+  },
+  "console": {
+    "errors": [],
+    "warnings": []
+  },
+  "final": {
+    "cards": 8,
+    "searchInputs": 1,
+    "favoriteButtons": 8,
+    "activeFavorites": 0
+  }
+}

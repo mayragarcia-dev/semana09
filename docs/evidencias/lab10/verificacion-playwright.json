@@ -1,0 +1,68 @@
+{
+  "initial": {
+    "cards": 8,
+    "hero": "Duna: Parte Dos",
+    "search": true,
+    "favorites": 8,
+    "stored": "[]"
+  },
+  "duna": {
+    "cards": 1,
+    "titles": [
+      "Duna: Parte Dos"
+    ],
+    "note": "1 de 8 películas"
+  },
+  "empty": {
+    "cards": 0,
+    "empty": true,
+    "text": "SIN RESULTADOS\n\nNo encontramos “zzz”\n\nPrueba con otro título o revisa la ortografía.\n\nLimpiar búsqueda"
+  },
+  "beforeReload": {
+    "stored": "[\"duna-parte-dos\",\"oppenheimer\",\"poor-things\"]",
+    "active": 3,
+    "labels": [
+      "★En favoritas",
+      "★En favoritas",
+      "★En favoritas",
+      "☆Favorita"
+    ]
+  },
+  "afterReload": {
+    "stored": "[\"duna-parte-dos\",\"oppenheimer\",\"poor-things\"]",
+    "active": 3,
+    "labels": [
+      "★En favoritas",
+      "★En favoritas",
+      "★En favoritas",
+      "☆Favorita"
+    ]
+  },
+  "logs": [
+    {
+      "type": "log",
+      "text": "[search] keystroke: d",
+      "timestamp": 1793766332133
+    },
+    {
+      "type": "log",
+      "text": "[search] keystroke: du",
+      "timestamp": 1793766332264
+    },
+    {
+      "type": "log",
+      "text": "[search] keystroke: dun",
+      "timestamp": 1793766332388
+    },
+    {
+      "type": "log",
+      "text": "[search] keystroke: duna",
+      "timestamp": 1793766332511
+    },
+    {
+      "type": "log",
+      "text": "[filter] applied for \"duna\" → 1 result(s)",
+      "timestamp": 1793766332850
+    }
+  ]
+}

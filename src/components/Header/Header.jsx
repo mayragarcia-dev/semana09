@@ -1,3 +1,4 @@
+import Button from '../Button/Button.jsx'
 import '../../styles/header.css'
 
 export default function Header() {
@@ -12,7 +13,9 @@ export default function Header() {
         <a className="nav-link" href="#proximamente">Próximamente</a>
         <a className="nav-link" href="#experiencia">La experiencia</a>
       </nav>
-      <a className="header-cta" href="#cartelera">Ver películas <span aria-hidden="true">↗</span></a>
+      <Button className="header-cta" href="#cartelera" variant="ghost">
+        Ver películas <span aria-hidden="true">↗</span>
+      </Button>
     </header>
   )
 }
