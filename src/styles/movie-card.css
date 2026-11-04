@@ -8,6 +8,8 @@
 .movie-card__heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 9px; min-height: 38px; }
 .movie-card h3 { margin: 0; color: var(--color-text); font: 400 17px/1.2 var(--font-display); }
 .movie-card__rating { flex: 0 0 auto; color: var(--color-accent); font-size: 11px; }
-.movie-card__times { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 6px; }
+.movie-card__times { display: flex; flex-wrap: wrap; gap: 6px; }
 .movie-card__time { padding: 6px 8px; border: 1px solid var(--color-line); color: #d2cdc4; font-size: 9px; }
+.movie-card__footer { margin-top: 14px; display: flex; align-items: flex-end; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.movie-card__favorite { flex: 0 0 auto; }
 @media (max-width: 600px) { .movie-card__poster-wrap { height: 240px; } .movie-card__body { padding: 12px; } .movie-card h3 { font-size: 15px; } }

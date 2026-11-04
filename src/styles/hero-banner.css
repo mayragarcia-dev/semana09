@@ -7,8 +7,9 @@
 .featured-hero h1 { max-width: 600px; margin: 0; color: var(--color-text); font: 400 clamp(54px, 7vw, 92px)/.98 var(--font-display); letter-spacing: -.055em; }
 .featured-hero__meta { margin: 23px 0 0; color: #ded8ce; font-size: 12px; letter-spacing: .06em; }
 .featured-hero__meta span { margin: 0 8px; color: var(--color-accent); }
-.featured-hero__synopsis { max-width: 470px; margin: 19px 0 27px; color: #c0bbb2; font-size: 13px; line-height: 1.8; }
-.featured-hero__button { min-width: 157px; padding: 14px 16px; display: inline-flex; justify-content: space-between; border: 1px solid var(--color-accent); color: var(--color-text); font-size: 11px; }
+.featured-hero__synopsis { max-width: 470px; margin: 19px 0 0; color: #c0bbb2; font-size: 13px; line-height: 1.8; }
+.featured-hero__actions { margin-top: 16px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.featured-hero__button { min-width: 157px; justify-content: space-between; color: var(--color-text); }
 .featured-hero__button span { color: var(--color-accent); font-size: 15px; }
 .featured-hero__index { position: absolute; z-index: 1; right: var(--page-gutter); bottom: 27px; color: #c6c0b5; font-size: 8px; letter-spacing: .17em; }
 .featured-hero__index b { margin: 0 7px; color: var(--color-accent); }
